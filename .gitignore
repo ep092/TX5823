@@ -1,0 +1,24 @@
+# die folgenden Dateitypen und Ordner werden nicht ins git aufgenommen!
+
+# Atmel-Kompilat:
+.dep/
+*.eep
+*.elf
+*.hex
+*.lss
+*.lst
+*.map
+*.o
+*.sym
+
+# KiCAD:
+*.bak
+*.brd
+*.kicad_pcb-bak
+*.gif
+*.ps
+
+#libre office
+.ods#
+
+.directory
