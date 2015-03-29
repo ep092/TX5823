@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 15:35:57 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 18:43:01 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -603,6 +603,13 @@ IdModule  = Resistors_SMD:R_Array_Concave_4x0603;
 EndCmp
 
 BeginCmp
+TimeStamp = /5518495B;
+Reference = SMA_E1;
+ValeurCmp = SMA_EDGE;
+IdModule  = toni:SMA_EDGE;
+EndCmp
+
+BeginCmp
 TimeStamp = /5515C7C3;
 Reference = SW1;
 ValeurCmp = SW_PUSH;
@@ -641,7 +648,7 @@ BeginCmp
 TimeStamp = /55179160;
 Reference = U4;
 ValeurCmp = CONN_03X08;
-IdModule  = ;
+IdModule  = toni:Conn_03x08;
 EndCmp
 
 BeginCmp
@@ -662,7 +669,7 @@ BeginCmp
 TimeStamp = /551495BC;
 Reference = U7;
 ValeurCmp = MAX7456_DS;
-IdModule  = ;
+IdModule  = toni:TSSOP-20_4.4x6.5mm_Pitch0.65mm_EP;
 EndCmp
 
 BeginCmp

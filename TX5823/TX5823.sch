@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:SMA_EDGE
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,8 +30,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:Resonator_3pins
+LIBS:rx5808
+LIBS:tps62160
+LIBS:Rafi
 LIBS:toni
-LIBS:TX5823-cache
+LIBS:rx5808_4button-cache
 EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
@@ -75,7 +80,7 @@ U 1 1 551495BC
 P 13850 7200
 F 0 "U7" H 14400 6600 60  0000 C CNN
 F 1 "MAX7456_DS" H 14000 8050 60  0000 C CNN
-F 2 "" H 13850 7200 60  0001 C CNN
+F 2 "toni:TSSOP-20_4.4x6.5mm_Pitch0.65mm_EP" H 13850 7200 60  0001 C CNN
 F 3 "" H 13850 7200 60  0000 C CNN
 	1    13850 7200
 	1    0    0    -1  
@@ -2771,4 +2776,50 @@ Wire Wire Line
 	6550 3450 6850 3450
 Text Notes 11300 4600 0    60   ~ 0
 75Ohm Videosignal routen:\n\nLeitungsbreite 171,25 µm, daneben massefläche mit einem Abstand von 200 µm zur Leitung. \ndarunter Massefläche mit einem Abstand von z=220 µm\nergibt dann 75 R bei FR4 	  		
+$Comp
+L SMA_EDGE SMA_E1
+U 1 1 5518495B
+P 15050 1550
+F 0 "SMA_E1" H 15200 1850 60  0000 C CNN
+F 1 "SMA_EDGE" H 15200 1750 60  0000 C CNN
+F 2 "" H 15050 1550 60  0000 C CNN
+F 3 "" H 15050 1550 60  0000 C CNN
+	1    15050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14250 1550 14700 1550
+$Comp
+L GND #PWR0100
+U 1 1 55184ED5
+P 14700 1650
+F 0 "#PWR0100" H 14700 1650 30  0001 C CNN
+F 1 "GND" H 14700 1580 30  0001 C CNN
+F 2 "" H 14700 1650 60  0000 C CNN
+F 3 "" H 14700 1650 60  0000 C CNN
+	1    14700 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR0101
+U 1 1 55184F4A
+P 14700 1450
+F 0 "#PWR0101" H 14700 1450 30  0001 C CNN
+F 1 "GND" H 14700 1380 30  0001 C CNN
+F 2 "" H 14700 1450 60  0000 C CNN
+F 3 "" H 14700 1450 60  0000 C CNN
+	1    14700 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR0102
+U 1 1 551851AF
+P 14250 1750
+F 0 "#PWR0102" H 14250 1750 30  0001 C CNN
+F 1 "GND" H 14250 1680 30  0001 C CNN
+F 2 "" H 14250 1750 60  0000 C CNN
+F 3 "" H 14250 1750 60  0000 C CNN
+	1    14250 1750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
