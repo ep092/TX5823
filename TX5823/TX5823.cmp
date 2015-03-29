@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 03:33:52 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 15:35:57 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -620,21 +620,21 @@ BeginCmp
 TimeStamp = /5514C262;
 Reference = U1;
 ValeurCmp = LM25118;
-IdModule  = ;
+IdModule  = toni:TSSOP-20_4.4x6.5mm_Pitch0.65mm_EP;
 EndCmp
 
 BeginCmp
 TimeStamp = /5513E458;
 Reference = U2;
 ValeurCmp = TPS54531;
-IdModule  = ;
+IdModule  = toni:SO8_EP;
 EndCmp
 
 BeginCmp
 TimeStamp = /5514B0D0;
 Reference = U3;
 ValeurCmp = TPS7A7200RGT;
-IdModule  = Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm;
+IdModule  = toni:QFN-16-1EP_3x3mm_Pitch0.5mm;
 EndCmp
 
 BeginCmp
@@ -655,7 +655,7 @@ BeginCmp
 TimeStamp = /5513E991;
 Reference = U6;
 ValeurCmp = TX5823;
-IdModule  = ;
+IdModule  = toni:TX5823;
 EndCmp
 
 BeginCmp

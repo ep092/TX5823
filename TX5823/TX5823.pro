@@ -1,4 +1,4 @@
-update=So 29 Mär 2015 00:48:55 CET
+update=So 29 Mär 2015 15:20:32 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -47,7 +47,7 @@ LibName31=/home/toni/Dropbox/kicad sync/kicad/library_toni/library/toni
 version=1
 PageLayoutDescrFile=
 LastNetListRead=TX5823.net
-UseCmpFile=0
+UseCmpFile=1
 PadDrill=0.6
 PadDrillOvalY=0.6
 PadSizeH=1.5
