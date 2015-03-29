@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 18:43:01 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 29 Mär 2015 23:44:11 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -326,14 +326,14 @@ BeginCmp
 TimeStamp = /55161319;
 Reference = L1;
 ValeurCmp = INDUCTOR;
-IdModule  = ;
+IdModule  = Choke_SMD:Choke_SMD_Wuerth-WE-PD-Typ-LS_Handsoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /5516475A;
 Reference = L2;
 ValeurCmp = 15uH;
-IdModule  = ;
+IdModule  = Choke_SMD:Choke_SMD_12x12mm_h4.5mm;
 EndCmp
 
 BeginCmp
@@ -361,7 +361,7 @@ BeginCmp
 TimeStamp = /55164478;
 Reference = Q1;
 ValeurCmp = MOS_N;
-IdModule  = ;
+IdModule  = toni:SO8_WITH_EP;
 EndCmp
 
 BeginCmp
@@ -613,14 +613,14 @@ BeginCmp
 TimeStamp = /5515C7C3;
 Reference = SW1;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = toni:EVQP7A;
 EndCmp
 
 BeginCmp
 TimeStamp = /5519BDF1;
 Reference = SW2;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = toni:EVQP7A;
 EndCmp
 
 BeginCmp
@@ -683,7 +683,7 @@ BeginCmp
 TimeStamp = /5515EDF4;
 Reference = X1;
 ValeurCmp = 27MHz;
-IdModule  = ;
+IdModule  = toni:CRYSTAL_MT;
 EndCmp
 
 BeginCmp
