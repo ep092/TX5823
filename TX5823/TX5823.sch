@@ -2218,4 +2218,6 @@ Wire Wire Line
 Wire Wire Line
 	9550 1500 9600 1500
 Connection ~ 9600 1100
+Text Notes 14500 8400 0    60   ~ 0
+Achtung, 5V nicht anschließen
 $EndSCHEMATC
