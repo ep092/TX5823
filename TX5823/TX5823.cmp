@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Mo 30 Mär 2015 02:14:55 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Do 02 Apr 2015 14:40:24 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -200,7 +200,7 @@ BeginCmp
 TimeStamp = /5516115D;
 Reference = D1;
 ValeurCmp = DIODE;
-IdModule  = ;
+IdModule  = toni:POWERDI5;
 EndCmp
 
 BeginCmp
@@ -487,7 +487,7 @@ BeginCmp
 TimeStamp = /551495BC;
 Reference = U7;
 ValeurCmp = MAX7456_DS;
-IdModule  = toni:TSSOP-20_4.4x6.5mm_Pitch0.65mm_EP;
+IdModule  = toni:TSSOP-28_4.4x9.7mm_Pitch0.65mm_EP;
 EndCmp
 
 BeginCmp
