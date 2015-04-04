@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Do 02 Apr 2015 14:40:24 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 01:54:02 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -22,10 +22,31 @@ IdModule  = Capacitors_SMD:C_1210;
 EndCmp
 
 BeginCmp
+TimeStamp = /551F517D;
+Reference = C4;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /5516234C;
 Reference = C5;
 ValeurCmp = Ccomp2;
 IdModule  = Capacitors_SMD:C_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F5183;
+Reference = C6;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F518F;
+Reference = C7;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:C_0402;
 EndCmp
 
 BeginCmp
@@ -36,10 +57,38 @@ IdModule  = Capacitors_SMD:C_0805;
 EndCmp
 
 BeginCmp
+TimeStamp = /552042CA;
+Reference = C9;
+ValeurCmp = C;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F51E1;
+Reference = C10;
+ValeurCmp = 220pF;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
 TimeStamp = /551621D5;
 Reference = C11;
 ValeurCmp = 10nF;
 IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F5189;
+Reference = C12;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F528F;
+Reference = C13;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:C_1206;
 EndCmp
 
 BeginCmp
@@ -204,6 +253,13 @@ IdModule  = toni:POWERDI5;
 EndCmp
 
 BeginCmp
+TimeStamp = /55204830;
+Reference = D2;
+ValeurCmp = ZENER;
+IdModule  = Diodes_SMD:Diode-MiniMELF_Standard;
+EndCmp
+
+BeginCmp
 TimeStamp = /5515F916;
 Reference = D6;
 ValeurCmp = LED;
@@ -253,10 +309,38 @@ IdModule  = Connectors_Molex:Connector_Molex_PicoBlade_53261-0571;
 EndCmp
 
 BeginCmp
+TimeStamp = /55200112;
+Reference = Q1;
+ValeurCmp = MOSFET_P;
+IdModule  = toni:SO8_WITH_EP;
+EndCmp
+
+BeginCmp
 TimeStamp = /55152C9C;
 Reference = Q3;
 ValeurCmp = MOSFET_N;
 IdModule  = toni:SOT23_GDS;
+EndCmp
+
+BeginCmp
+TimeStamp = /55203566;
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55200584;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55203E4C;
+Reference = R3;
+ValeurCmp = R;
+IdModule  = Resistors_SMD:R_1206;
 EndCmp
 
 BeginCmp
@@ -446,6 +530,13 @@ TimeStamp = /5519BDF1;
 Reference = SW2;
 ValeurCmp = SW_PUSH;
 IdModule  = toni:EVQP7A;
+EndCmp
+
+BeginCmp
+TimeStamp = /551F5159;
+Reference = U1;
+ValeurCmp = TPS7A7200RGT;
+IdModule  = toni:QFN-16-1EP_3x3mm_Pitch0.5mm;
 EndCmp
 
 BeginCmp
