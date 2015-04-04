@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 01:54:02 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 11:09:43 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -309,6 +309,34 @@ IdModule  = Connectors_Molex:Connector_Molex_PicoBlade_53261-0571;
 EndCmp
 
 BeginCmp
+TimeStamp = /551FB334;
+Reference = P4;
+ValeurCmp = CONN_01X01;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FB3E2;
+Reference = P5;
+ValeurCmp = CONN_01X01;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FB45A;
+Reference = P6;
+ValeurCmp = CONN_01X01;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x01;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FB4CB;
+Reference = P7;
+ValeurCmp = CONN_01X01;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x01;
+EndCmp
+
+BeginCmp
 TimeStamp = /55200112;
 Reference = Q1;
 ValeurCmp = MOSFET_P;
@@ -341,6 +369,20 @@ TimeStamp = /55203E4C;
 Reference = R3;
 ValeurCmp = R;
 IdModule  = Resistors_SMD:R_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5520E09A;
+Reference = R4;
+ValeurCmp = 280k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5520E1DF;
+Reference = R5;
+ValeurCmp = 30,9k;
+IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
