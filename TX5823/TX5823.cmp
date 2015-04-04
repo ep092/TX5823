@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 11:09:43 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 15:47:44 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -628,6 +628,13 @@ TimeStamp = /5519658E;
 Reference = U8;
 ValeurCmp = OPTO-TRANSISTOR4;
 IdModule  = toni:SO-4;
+EndCmp
+
+BeginCmp
+TimeStamp = /551FFB80;
+Reference = U9;
+ValeurCmp = TPS22963;
+IdModule  = toni:DSBGS(6);
 EndCmp
 
 BeginCmp
