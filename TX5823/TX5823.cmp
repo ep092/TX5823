@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = Sa 04 Apr 2015 15:47:44 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 05 Apr 2015 14:02:12 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -393,6 +393,20 @@ IdModule  = Resistors_SMD:R_0402;
 EndCmp
 
 BeginCmp
+TimeStamp = /552186B0;
+Reference = R7;
+ValeurCmp = 10k;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5521767B;
+Reference = R8;
+ValeurCmp = 300R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /55161370;
 Reference = R10;
 ValeurCmp = Rfbt;
@@ -505,23 +519,16 @@ IdModule  = Resistors_SMD:R_1206;
 EndCmp
 
 BeginCmp
-TimeStamp = /5519918F;
-Reference = R26;
-ValeurCmp = open;
-IdModule  = Resistors_SMD:R_0603;
-EndCmp
-
-BeginCmp
 TimeStamp = /551949B3;
 Reference = R27;
-ValeurCmp = 100R;
+ValeurCmp = 1k;
 IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /55197380;
 Reference = R28;
-ValeurCmp = 300R;
+ValeurCmp = 1k;
 IdModule  = Resistors_SMD:R_0603;
 EndCmp
 
@@ -563,13 +570,6 @@ EndCmp
 BeginCmp
 TimeStamp = /5515C7C3;
 Reference = SW1;
-ValeurCmp = SW_PUSH;
-IdModule  = toni:EVQP7A;
-EndCmp
-
-BeginCmp
-TimeStamp = /5519BDF1;
-Reference = SW2;
 ValeurCmp = SW_PUSH;
 IdModule  = toni:EVQP7A;
 EndCmp
@@ -624,9 +624,9 @@ IdModule  = toni:TSSOP-28_4.4x9.7mm_Pitch0.65mm_EP;
 EndCmp
 
 BeginCmp
-TimeStamp = /5519658E;
+TimeStamp = /552129F8;
 Reference = U8;
-ValeurCmp = OPTO-TRANSISTOR4;
+ValeurCmp = ADuM1201AR;
 IdModule  = toni:SO-4;
 EndCmp
 
@@ -635,6 +635,13 @@ TimeStamp = /551FFB80;
 Reference = U9;
 ValeurCmp = TPS22963;
 IdModule  = toni:DSBGS(6);
+EndCmp
+
+BeginCmp
+TimeStamp = /55216F1B;
+Reference = U10;
+ValeurCmp = OPTO-TRANSISTOR4;
+IdModule  = toni:SO-4;
 EndCmp
 
 BeginCmp
