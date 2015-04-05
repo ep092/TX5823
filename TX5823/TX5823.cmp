@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 05 Apr 2015 14:02:12 CEST
+Cmp-Mod V01 Created by Cvpcb (2014-10-31 BZR 5243)-product   date = So 05 Apr 2015 14:05:15 CEST
 
 BeginCmp
 TimeStamp = /55165904;
@@ -627,7 +627,7 @@ BeginCmp
 TimeStamp = /552129F8;
 Reference = U8;
 ValeurCmp = ADuM1201AR;
-IdModule  = toni:SO-4;
+IdModule  = Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm;
 EndCmp
 
 BeginCmp
