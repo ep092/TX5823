@@ -1,0 +1,100 @@
+Reference	Value	Footprint	Datasheet	Teilenummer	Bestellnummer	Anzahl lagernd	
+U2	TPS54531	toni:SO8_EP				3	d
+U6	TX5823	toni:TX5823				0	
+U7	MAX7456_DS	toni:TSSOP-28_4.4x9.7mm_Pitch0.65mm_EP				4	
+IC1	ATMEGA328P-A	Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm				20	
+IC2	ATTINY13A-SS	SMD_Packages:SOIC-8-N				20	
+R24	10k	Resistors_SMD:R_0603				0	d
+U3	TPS7A7200RGT	toni:QFN-16-1EP_3x3mm_Pitch0.5mm				3	
+R23	10	Resistors_SMD:R_0805				x	
+Q3	MOSFET_N	toni:SOT23_GDS				x	
+R25	100	Resistors_SMD:R_1206				x	
+C29	100nF	Capacitors_SMD:C_0402				x	
+C31	100nF	Capacitors_SMD:C_0402				x	
+C19	1uF	Capacitors_SMD:C_0603				x	
+C21	100nF	Capacitors_SMD:C_0402				x	
+C32	1uF	Capacitors_SMD:C_0603				x	
+C26	1uF	Capacitors_SMD:C_0603				x	
+C27	10uF	Capacitors_SMD:C_1206				x	
+C22	100nF	Capacitors_SMD:C_0402				x	
+R17	open	Resistors_SMD:R_0402				x	
+R19	open	Resistors_SMD:R_0402				x	
+R20	open	Resistors_SMD:R_0402				x	
+C23	100nF	Capacitors_SMD:C_0402				x	
+SW1	SW_PUSH	toni:EVQP7A				0	d
+R13	10k	Resistors_SMD:R_0603				0	d
+C20	100nF	Capacitors_SMD:C_0402				x	
+Y1	16MHz	toni:CerOsc_3,2x1,3				0	r
+R21	open	Resistors_SMD:R_0402				x	
+R22	330	Resistors_SMD:R_0805				0	d
+D6	LED	LEDs:LED-0603				x	
+C35	47uF	Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow				0	d
+C36	47uF	Capacitors_Tantalum_SMD:TantalC_SizeB_EIA-3528_Reflow				0	d
+R29	75	Capacitors_SMD:C_0805				0	d
+C33	100nF	Capacitors_SMD:C_0402				x	
+C34	1uF	Capacitors_SMD:C_0603				x	
+C37	100nF/NP0	Capacitors_SMD:C_1206		C3216C0G1H104J160AA		0	
+R30	75	Capacitors_SMD:C_0805				r	
+C30	100nF	Capacitors_SMD:C_0402				x	
+RP1	1k	Resistors_SMD:R_Array_Concave_4x0603				0	r
+P2	ISP	toni:micro_match3x2				0	r
+X1	27MHz	toni:CRYSTAL_MT			NDK NX3225SA-27.000MHZ-STD-CSR-1	0	d
+C24	100nF	Capacitors_SMD:C_0402				x	
+C25	100nF	Capacitors_SMD:C_0402				x	
+C28	1uF	Capacitors_SMD:C_0603				x	
+C14	Cboot	Capacitors_SMD:C_0402		C1005X5R1A104K		0	d
+D1	DIODE	toni:POWERDI5		PDS760-13		0	d
+L1	INDUCTOR	Choke_SMD:Choke_SMD_Wuerth-WE-PD-Typ-LS_Handsoldering				4	d
+R10	Rfbt	Resistors_SMD:R_0402		CRCW040210K2FKED		0	d
+R11	Rfbb	Resistors_SMD:R_0402		CRCW04021K96FKED		0	d
+C16	Cout	Capacitors_SMD:C_1210		GRM32ER61E226KE15L		0	d
+C11	10nF	Capacitors_SMD:C_0402		GRM033R61A822KA01D		0	evtl
+C8	Ccomp	Capacitors_SMD:C_0805		CC0805JRNPO9BN102		0	d
+R6	Rcomp	Resistors_SMD:R_0402		CRCW040252K3FKED		0	d
+C5	Ccomp2	Capacitors_SMD:C_0805		C0805C180K5GACTU		0	d
+C3	Cin	Capacitors_SMD:C_1210		GRM32ER71H475KA88L		0	d
+C17	Cout	Capacitors_SMD:C_1210		GRM32ER61E226KE15L		0	d
+C1	Cin	Capacitors_SMD:C_1210		GRM32ER71H475KA88L		0	d
+U4	CONN_03X08	toni:Conn_03x08				4	
+R12	open	Resistors_SMD:R_0603				x	
+R14	open	Resistors_SMD:R_0603				x	
+R15	0R	Resistors_SMD:R_0603				x	
+R16	open	Resistors_SMD:R_0603				x	
+P3	Mavlink	Connectors_Molex:Connector_Molex_PicoBlade_53261-0571				4	
+R27	1k	Resistors_SMD:R_0603				r	
+R18	330R	Resistors_SMD:R_0805				r	
+R28	1k	Resistors_SMD:R_0603				r	
+P1	Akku_in	Socket_Strips:Socket_Strip_Angled_1x02				x	
+R31	330R	Capacitors_SMD:C_0805				r	
+SMA_E1	SMA_EDGE	toni:SMA_EDGE				0	phil
+C2	220pF	Capacitors_SMD:C_0402		 		0	d
+U1	TPS7A7200RGT	toni:QFN-16-1EP_3x3mm_Pitch0.5mm				r	
+C4	1uF	Capacitors_SMD:C_0603				x	
+C6	100nF	Capacitors_SMD:C_0402				x	
+C12	1uF	Capacitors_SMD:C_0603				x	
+C7	100nF	Capacitors_SMD:C_0402				x	
+C10	220pF	Capacitors_SMD:C_0402		 		r	
+C13	10uF	Capacitors_SMD:C_1206				x	
+Q1	MOSFET_P	toni:SO8_WITH_EP		FDS4141		x	
+R2	R	Resistors_SMD:R_0603				x	
+R1	R	Resistors_SMD:R_0603				x	
+R3	R	Resistors_SMD:R_1206		ersetzen durch ferrit s.u.		x	
+C9	C	Capacitors_SMD:C_0603		 		x	
+D2	ZENER	Diodes_SMD:Diode-MiniMELF_Standard				x	
+R4	280k	Resistors_SMD:R_0603		0,10%		0	d
+R5	30,9k	Resistors_SMD:R_0603		0,10%		0	d
+P4	CONN_01X01	Pin_Headers:Pin_Header_Straight_1x01				x	
+P5	CONN_01X01	Pin_Headers:Pin_Header_Straight_1x01				x	
+P6	CONN_01X01	Pin_Headers:Pin_Header_Straight_1x01				x	
+P7	CONN_01X01	Pin_Headers:Pin_Header_Straight_1x01				x	
+U9	TPS22963	toni:DSBGS(6)				x	
+U5	OPTO-TRANSISTOR4	toni:SO-4				16	
+U8	ADuM7241 ARZ	Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm				3	d
+U10	OPTO-TRANSISTOR4	toni:SO-4				r	
+R8	330R	Resistors_SMD:R_0603				r	
+R7	10k	Resistors_SMD:R_0603				0	d
+C15	100nF	Capacitors_SMD:C_0402				x	
+C18	100nF	Capacitors_SMD:C_0402				x	
+D3	P6SMB 27A SMD	Diodes_SMD:Diode-SMB_Standard				0	r
+							
+	ferrit würth			742792150		0	d

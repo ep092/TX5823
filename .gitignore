@@ -24,3 +24,6 @@
 MinimOSD-v11
 multiCameraIrControl
 .directory
+
+bom2csv.xsl
+bom2csv_tab.xsl
