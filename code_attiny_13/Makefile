@@ -39,12 +39,12 @@
 
 
 # MCU name
-MCU = atmega168p
+MCU = attiny13a
 
 # Main Oscillator Frequency
 # This is only used to define F_OSC in all assembler and c-sources.
-F_OSC = 16000000
-F_CPU = 16000000
+F_OSC = 8000000
+F_CPU = 8000000
 # Output format. (can be srec, ihex, binary)
 FORMAT = ihex
 
@@ -139,7 +139,7 @@ PRINTF_LIB_MIN = -Wl,-u,vfprintf -lprintf_min
 # Floating point printf version (requires MATH_LIB = -lm below)
 PRINTF_LIB_FLOAT = -Wl,-u,vfprintf -lprintf_flt
 
-PRINTF_LIB = $(PRINTF_LIB_FLOAT)
+PRINTF_LIB = 
 
 # Minimalistic scanf version
 SCANF_LIB_MIN = -Wl,-u,vfscanf -lscanf_min
