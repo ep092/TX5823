@@ -38,24 +38,13 @@
 
 // Channels to sent to the SPI registers
 const uint16_t channelTable[] PROGMEM = {
-  // Channel 1 - 8
-  0x2A05,    0x299B,    0x2991,    0x2987,    0x291D,    0x2913,    0x2909,    0x289F,    // Band A
-  0x2903,    0x290C,    0x2916,    0x291F,    0x2989,    0x2992,    0x299C,    0x2A05,    // Band B
-  0x2895,    0x288B,    0x2881,    0x2817,    0x2A0F,    0x2A19,    0x2A83,    0x2A8D,    // Band E
-  0x2906,    0x2910,    0x291A,    0x2984,    0x298E,    0x2998,    0x2A02,    0x2A0C  // Band F / Airwave
+	// CH 1 CH 2 	CH 3 	CH 4 	CH 5 	CH 6 	CH 7 	CH 8
+	0x7981, 0x758D, 0x7199, 0x6DA5, 0x69B1, 0x65BD, 0x6209, 0x5E15, // Band A
+	0x5F9D, 0x6338, 0x6713, 0x6AAE, 0x6E89, 0x7224, 0x75BF, 0x799A, // Band B
+	0x5A21, 0x562D, 0x5239, 0x4E85, 0x7D35, 0x8129, 0x851D, 0x8911, // Band E
+	0x610C, 0x6500, 0x68B4, 0x6CA8, 0x709C, 0x7490, 0x7884, 0x7C38, // Band F / Airwave
+	0x510A, 0x5827, 0x5F84, 0x66A1, 0x6DBE, 0x751B, 0x7C38, 0x8395 // Band R / Raceband
 };
-
-/*
-// Channels with their Mhz Values
-const uint16_t channelFreqTable[] PROGMEM = {
-  // Channel 1 - 8
-  5865, 5845, 5825, 5805, 5785, 5765, 5745, 5725, // Band A
-  5733, 5752, 5771, 5790, 5809, 5828, 5847, 5866, // Band B
-  5705, 5685, 5665, 5645, 5885, 5905, 5925, 5945, // Band E
-  5740, 5760, 5780, 5800, 5820, 5840, 5860, 5880  // Band F / Airwave
-};
-*/
-
 
 volatile uint8_t pwm_value = 0 ;
 
@@ -135,14 +124,11 @@ void set_channel(uint8_t channel){
 	uint8_t i;
 	uint16_t channelData;
 
-	//channelData = pgm_read_word(&channelTable[channel]);
-	channelData = channelTable[channel];	
-	//channelData = pgm_read_word_near(channelTable + channel);
-
+	channelData = pgm_read_word_near(channelTable + channel);
 	// 25 bits of data
 	// Order: A0-3, !R/W, D0-D19
-	// A0=0, A1=0, A2=0, A3=1, RW=0, D0-19=0
- 
+	// A0=1, A1=0, A2=0, A3=0, RW=0, D0-19=0 
+
 	// 20 bytes of register data are sent, but the MSB 4 bits are zeros
 	// register address = 0x1, write, data0-15=channelData data15-19=0x0
 
@@ -174,9 +160,10 @@ void set_channel(uint8_t channel){
 	}
 
 	// Remaining D16-D19
-	for (i = 4; i > 0; i--){
-		serial_send_bit_0();
-	}
+	serial_send_bit_0();
+	serial_send_bit_0();
+	serial_send_bit_1();
+	serial_send_bit_0();
 
 	// Finished clocking data in
 	serial_enable_high();
@@ -209,17 +196,18 @@ int main(void) {
 	init();
 	timer_init();
 	int0_init();
+	//TODO sei();
 	canon_shutter_now();
 	_delay_ms(1000);
 	pwm_value = 0;
 	_delay_ms(100);
 	
 	while (1){
-		//for (int i = 0; i<32; i++){
+		for (int i = 0; i<32; i++){
 			_delay_ms(9000);
-			set_channel(20);
+			set_channel(i);
 			canon_shutter_now();
-		//}
+		}
 	}	
 }
 
