@@ -47,6 +47,7 @@ const uint16_t channelTable[] PROGMEM = {
 };
 
 volatile uint8_t pwm_value = 0 ;
+volatile uint8_t new_data = 0 ;
 
 void canon_shutter_now(void){
 	for(int i=0; i<16; i++) { 
@@ -193,24 +194,53 @@ void init (void){
 }
 
 int main(void) {
+	uint8_t pwm_pulse_now;
+	uint8_t pwm_pulse_last;
+	uint8_t channel = 8;		//channel at startup
 	init();
 	timer_init();
 	int0_init();
-	//TODO sei();
+	set_channel(channel);
+	sei();
 	canon_shutter_now();
 	_delay_ms(1000);
 	pwm_value = 0;
+	new_data = 0;
 	_delay_ms(100);
-	
 	while (1){
-		for (int i = 0; i<32; i++){
-			_delay_ms(9000);
-			set_channel(i);
-			canon_shutter_now();
+		//wait for new data and detect timeout at pwm_in
+		for(uint8_t i = 0; new_data==0 && i<200; i++){
+			_delay_ms(1);
 		}
+		if (new_data) {
+			//TODO
+			pwm_pulse_last = pwm_pulse_now;
+			pwm_pulse_now = pwm_value;
+			if (pwm_pulse_now > 80 && pwm_pulse_now < 120){		//switch channel
+				if (pwm_pulse_last > 120 && pwm_pulse_last < 180){	//detect "falling edge"
+					channel++;
+					set_channel(channel);	
+					_delay_ms(200); 
+				}
+				
+			} else if(pwm_pulse_now > 180 && pwm_pulse_now < 220){	//do photo
+				while (pwm_value >180 && pwm_value < 220){
+					canon_shutter_now;
+					_delay_ms(3000);			//time between pictures
+				}
+			}
+			
+		}else{
+			pwm_value = 0;
+			pwm_pulse_last = 0;
+			pwm_pulse_now = 0;
+		}
+		
+		new_data = 0;
 	}	
 }
 
+//saves the length of the pwm_pulse to pwm_value
 ISR ( INT0_vect) {
 	uint8_t counter = TCNT0; //buffer timervalue  
 	TCNT0 = 0; //reset timer
@@ -218,8 +248,10 @@ ISR ( INT0_vect) {
 		TIFR0 |= (1<<TOV0);
 		if (!(PWM_IN_PORT & (1<<PWM_IN_PIN))){
 			counter = 0;
+			new_data = 1;
 		}
 	} else {
 		pwm_value = counter;
+		new_data = 1;
 	}		
 }
