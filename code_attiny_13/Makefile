@@ -38,13 +38,15 @@
 # - F_OSC Define in CFLAGS and AFLAGS
 
 
-# MCU name
+# MCU name used for compiler
 MCU = attiny13a
+# MCU name used for avrdude
+MCU2 = attiny13
 
 # Main Oscillator Frequency
 # This is only used to define F_OSC in all assembler and c-sources.
-F_OSC = 8000000
-F_CPU = 8000000
+F_OSC = 4800000
+F_CPU = 4800000
 # Output format. (can be srec, ihex, binary)
 FORMAT = ihex
 
@@ -207,7 +209,7 @@ AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 # to submit bug reports.
 #AVRDUDE_VERBOSE = -v -v
 
-AVRDUDE_FLAGS = -p $(MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER)
+AVRDUDE_FLAGS = -p $(MCU2) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER)
 AVRDUDE_FLAGS += $(AVRDUDE_NO_VERIFY)
 AVRDUDE_FLAGS += $(AVRDUDE_VERBOSE)
 AVRDUDE_FLAGS += $(AVRDUDE_ERASE_COUNTER)

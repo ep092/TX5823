@@ -25,6 +25,14 @@
 #define SPI_CLOCK_DDR DDRB
 #define SPI_CLOCK_PIN PB2
 
+#define TIME_BETWEEN_PHOTOS 3000
+
+//settings for pwm signal
+#define PWM_VALUE_0_MIN	105	//min length for the signal (pulse) to be detectet as "middle"
+#define PWM_VALUE_0_MAX 135	//max length for the signal (pulse) to be detectet as "middle"
+#define PWM_VALUE_MIN 75	//min length of the signal (pulse)
+#define PWM_VALUE_MAX 175	//max length of the signal (pulse)
+
 
 //non user defined:
 #define IR_LED_ON 		IR_LED_PORT |= (1 << IR_LED_PIN)
@@ -43,7 +51,7 @@ const uint16_t channelTable[] PROGMEM = {
 	0x5F9D, 0x6338, 0x6713, 0x6AAE, 0x6E89, 0x7224, 0x75BF, 0x799A, // Band B
 	0x5A21, 0x562D, 0x5239, 0x4E85, 0x7D35, 0x8129, 0x851D, 0x8911, // Band E
 	0x610C, 0x6500, 0x68B4, 0x6CA8, 0x709C, 0x7490, 0x7884, 0x7C38, // Band F / Airwave
-	0x510A, 0x5827, 0x5F84, 0x66A1, 0x6DBE, 0x751B, 0x7C38, 0x8395 // Band R / Raceband
+	0x510A, 0x5827, 0x5F84, 0x66A1, 0x6DBE, 0x751B, 0x7C38, 0x8395  // Band R / Raceband
 };
 
 volatile uint8_t pwm_value = 0 ;
@@ -128,10 +136,10 @@ void set_channel(uint8_t channel){
 	channelData = pgm_read_word_near(channelTable + channel);
 	// 25 bits of data
 	// Order: A0-3, !R/W, D0-D19
-	// A0=1, A1=0, A2=0, A3=0, RW=0, D0-19=0 
+	// A0=1, A1=0, A2=0, A3=0, RW=1, D0-19=0 
 
 	// 20 bytes of register data are sent, but the MSB 4 bits are zeros
-	// register address = 0x1, write, data0-15=channelData data15-19=0x0
+	// register address = 0x1, write, data0-15=channelData data15-19=0x4
 
 	serial_enable_high();
 	_delay_us(1);
@@ -169,7 +177,6 @@ void set_channel(uint8_t channel){
 	// Finished clocking data in
 	serial_enable_high();
 	_delay_us(1);
-
 }
 
 void int0_init(void){
@@ -178,7 +185,6 @@ void int0_init(void){
 }
 
 void timer_init(void){
-	TCCR0A |= (1<<WGM01); //mode of operation CTC
 	TCCR0B |= (1<<CS01) | (1<<CS00); //prescaler 64
 }
 
@@ -189,8 +195,7 @@ void init (void){
 	SPI_LE_DDR |= (1<<SPI_LE_PIN);
 	SPI_CLOCK_DDR |= (1<<SPI_CLOCK_PIN);
 	serial_enable_high();
-	SPI_CLOCK_LOW;
-	
+	SPI_CLOCK_LOW;	
 }
 
 int main(void) {
@@ -213,20 +218,19 @@ int main(void) {
 			_delay_ms(1);
 		}
 		if (new_data) {
-			//TODO
 			pwm_pulse_last = pwm_pulse_now;
 			pwm_pulse_now = pwm_value;
-			if (pwm_pulse_now > 80 && pwm_pulse_now < 120){		//switch channel
-				if (pwm_pulse_last > 120 && pwm_pulse_last < 180){	//detect "falling edge"
+			if (pwm_pulse_now > PWM_VALUE_MIN && pwm_pulse_now < PWM_VALUE_0_MIN){		//switch channel
+				if (pwm_pulse_last > PWM_VALUE_0_MIN && PWM_VALUE_0_MAX < 180){		//detect "falling edge"
 					channel++;
 					set_channel(channel);	
 					_delay_ms(200); 
 				}
-				
-			} else if(pwm_pulse_now > 180 && pwm_pulse_now < 220){	//do photo
-				while (pwm_value >180 && pwm_value < 220){
-					canon_shutter_now;
-					_delay_ms(3000);			//time between pictures
+			
+			} else if(pwm_pulse_now > PWM_VALUE_0_MAX && pwm_pulse_now < PWM_VALUE_MAX){	//do photo
+				while (pwm_value >PWM_VALUE_0_MAX && pwm_value < PWM_VALUE_MAX){	
+					canon_shutter_now();
+					_delay_ms(TIME_BETWEEN_PHOTOS);			//time between pictures
 				}
 			}
 			
@@ -245,12 +249,13 @@ ISR ( INT0_vect) {
 	uint8_t counter = TCNT0; //buffer timervalue  
 	TCNT0 = 0; //reset timer
 	if (TIFR0 & (1<<TOV0)){	//timeroverflow
-		TIFR0 |= (1<<TOV0);
-		if (!(PWM_IN_PORT & (1<<PWM_IN_PIN))){
-			counter = 0;
+		TIFR0 = _BV(TOV0);
+		if (PINB & (1<<PWM_IN_PIN)){
+			pwm_value = 0;
 			new_data = 1;
 		}
 	} else {
+
 		pwm_value = counter;
 		new_data = 1;
 	}		
