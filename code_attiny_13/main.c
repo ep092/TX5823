@@ -60,17 +60,17 @@ volatile uint8_t new_data = 0 ;
 void canon_shutter_now(void){
 	for(int i=0; i<16; i++) { 
 		IR_LED_ON;
-		_delay_us(11);
+		_delay_us(15);
 		IR_LED_OFF;
-		_delay_us(11);
+		_delay_us(15);
 		
 	} 
 	_delay_us(7330); 
 	for(int i=0; i<16; i++) { 
 		IR_LED_ON;
-		_delay_us(11);
+		_delay_us(15);
 		IR_LED_OFF;
-		_delay_us(11);
+		_delay_us(15);
 		
 	}
 }
