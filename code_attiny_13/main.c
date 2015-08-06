@@ -1,3 +1,6 @@
+//hfuse FB
+//lfuse 7A
+
 #include <avr/interrupt.h>
 #include <avr/io.h>
 #include <util/delay.h>
@@ -223,6 +226,9 @@ int main(void) {
 			if (pwm_pulse_now > PWM_VALUE_MIN && pwm_pulse_now < PWM_VALUE_0_MIN){		//switch channel
 				if (pwm_pulse_last > PWM_VALUE_0_MIN && PWM_VALUE_0_MAX < 180){		//detect "falling edge"
 					channel++;
+					if (channel >=15){	//limit to A- and B-Band 
+						channel = 0;
+					}
 					set_channel(channel);	
 					_delay_ms(200); 
 				}

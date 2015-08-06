@@ -6,9 +6,21 @@ Zusätzlich ist ein Infrarotauslöser für Canonkameras vorgesehen.
 
 -------------------
 Status:
-schaltplan fertig
-layout fertig
-platine bestellt
-Bauteile bestellt
-platine bestückt
-Tests erfolgreich
+-schaltplan fertig
+-layout fertig
+-platine bestellt
+-Bauteile bestellt
+-platine bestückt
+-Tests erfolgreich
+
+-------------------
+Steckerbelegung (Orientierung Pinleiste nach links, oben 1):
+-GND untere Reihe
+1 :GND, NC, Video in
+2: GND, NC, Sound in
+3: GND, NC, PWM in
+4: Infrator LED -, NC, Infrarot LED +
+5: GND, NC, 5V out
+6: GND. NC, 5V out
+7: GND, NC, 12V out (optional)
+8: GND, NC, 12V out (optional)
