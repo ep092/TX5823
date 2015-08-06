@@ -17,6 +17,7 @@ Status:
 Steckerbelegung (Orientierung Pinleiste nach links, oben 1):
 
 untere Reihe, mittlere Reihe, obere Reihe
+
 1. GND, NC, Video in
 2. GND, NC, Sound in
 3. GND, NC, PWM in
