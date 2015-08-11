@@ -29,6 +29,7 @@ untere Reihe, mittlere Reihe, obere Reihe
  
 
 -------------------
+
 Steckerbelegung mavlink Stecker
 1. DTR
 2. TX (Atmega Daten Senden)
