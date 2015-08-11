@@ -14,7 +14,7 @@ Status:
 - Tests erfolgreich
 
 -------------------
-Steckerbelegung (Orientierung Pinleiste nach links, oben 1):
+Steckerbelegung 3-reihige Pinleiste(Orientierung Pinleiste nach links, oben 1):
 
 untere Reihe, mittlere Reihe, obere Reihe
 
@@ -22,7 +22,17 @@ untere Reihe, mittlere Reihe, obere Reihe
 2. GND, NC, Sound in
 3. GND, NC, PWM in
 4. Infrator LED -, NC, Infrarot LED +
-5. GND, NC, 5V out
-6. GND. NC, 5V out
-7. GND, NC, 12V out (optional)
-8. GND, NC, 12V out (optional)
+5. GND, 5V out, NC
+6. GND. 5V out, NC
+7. GND, 12V out (optional), NC
+8. GND, 12V out (optional), NC
+ 
+
+-------------------
+Steckerbelegung mavlink Stecker
+1. DTR
+2. TX (Atmega Daten Senden)
+2. TX (Senden)
+3. RX (Atmega Daten Empfangen)
+4. 5/3,3V
+5. GND
