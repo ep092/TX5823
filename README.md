@@ -32,9 +32,8 @@ untere Reihe, mittlere Reihe, obere Reihe
 
 Steckerbelegung mavlink Stecker
 
-1. DTR
+1. DTR (für Reset über USB)
 2. TX (Atmega Daten Senden)
-2. TX (Senden)
 3. RX (Atmega Daten Empfangen)
 4. 5/3,3V
 5. GND
